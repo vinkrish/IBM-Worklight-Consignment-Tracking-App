@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="css/css_styling_ls.css">
+</head>
+<body onLoad="" id="content">
+<div class="navbar">
+<img style="position:absolute;top:8px;left:20px;background-color:transparent" src="images/dell_logo.png"/> 
+	<font color="white" style="position:absolute;top:17px;left:55px" size="4" id="AWB"> </font>
+	<img style="position:absolute;top:13px;left:460px;background-color:transparent" src="images/search_icon.png"/>
+	<input id="oi" type="image" src="images/options_icon.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent"
+	onClick="toggleoi()">
+	<input id="oip" type="image" src="images/options_icon_pressed.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent;opacity:0"
+	onClick="toggleoi()">
+</div>
+<br/>
+<form>
+<p style="margin-top:5px;font-size:13pt;margin-left:6px;" id="destination">to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="date">to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />	
+<p style="color:#BFB8BB; font-size:15pt;margin-top:-10px;margin-left:6px;" >    CONSIGNEE </p>
+<img style="position:relative;top:-33px;width:520px;margin-left:6px;"  src="images/field_li_Grey_desire.png" /> 
+<p style="margin-top:-20px;font-size:13pt;margin-left:6px;" id="name" > to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="addressline1"> to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="addressline2"> not available </p>		
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="city">  to display data fetched </p>	
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="phonenumber"> to display data fetched </p>	
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" /><br/>
+
+<p style="color:#BFB8BB;font-size:15pt;margin-top:-10px;margin-left:6px;" > CONSIGNOR </p>
+<img style="position:relative;top:-33px;width:520px;margin-left:6px;"  src="images/field_li_Grey_desire.png" />		
+<p  style="margin-top:-20px;font-size:13pt;margin-left:6px;" id="name2"> to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="addressline12"> to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="addressline22"> not available </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="city2"> to display data fetched </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="phonenumber2"> to display data fetched </p>		
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" /><br/>
+<p class="para"> <span style="position:relative;top:0px;width:100px;left:40px" id="lat"> lat</span>
+<span style="position:relative;top:0px;left:145px;width:100px" id="lng">long </span></p>
+<img style="position:relative;top:-25px;margin-left:6px;" src="images/field_bg_desire_small_grey.png" width="100"/>
+<img style="position:relative;top:-25px;left:30px" src="images/field_bg_desire_small_grey.png" width="100"/>
+</form>
+<div id="navigation" style="opacity:0;disabled:true">
+<ul>
+<li id="" onClick="openNativePage()"><a href="#">Create Consignment</a></li>
+<li id="" onClick="logout_tst()"><a href="#">Sign Out</a></li>
+</ul>
+</div>
+</body>
+</html>

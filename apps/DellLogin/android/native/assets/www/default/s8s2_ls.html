@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="css/css_styling_ls.css">
+</head>
+<body id="content">
+<div class="navbar">
+<img id="img" style="position:absolute;top:8px;left:15px;background-color:transparent" src="images/dell_logo.png"/> 
+	<input id="imgovr2" type="image" style="position:absolute;top:12px;left:20px;background-color:transparent;opacity:0;disable:true" src="images/update_btn.png" 
+		onClick="update_consignment_tst()" > 
+	<font id="txt" color="white" style="position:absolute;top:17px;left:65px" size="4" >   Update Consignment </font>
+	<img style="position:absolute;top:13px;left:460px;background-color:transparent" src="images/search_icon.png"/>
+	<input id="oi" type="image" src="images/options_icon.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent"
+	onClick="toggleoi()">
+	<input id="oip" type="image" src="images/options_icon_pressed.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent;opacity:0"
+	onClick="toggleoi()">
+</div>
+<br/>
+<form>
+<p class="para" style="margin-top:0px" id="AWB" > </p>
+<img style="position:relative;top:-20px;width:520px;margin-left:6px;" src="images/field_bg_Grey_desire.png" />
+<br/>
+<input type="date" name="udate" value="Day-Month-Year" class="s8s2d" id="udate"
+	onblur="if (this.value == '') {this.value = 'Day-Month-Year',this.style.color='#B3B9B3'};validateForm_s8s2(this.form)"
+	onfocus="if (this.value == 'Day-Month-Year') {this.value = '',this.style.color='#000000'};temp_rotation13(this.form)"
+	onclick="openNativePage3()"
+	/><br />
+	<img style="position:relative;top:-35px;margin-left:6px;" src="images/field_bg_desire.png" width="520"/>
+<p style="color:#6599ff;font-size:15pt;margin-top:-15px;margin-left:6px;">   LOCATION </p>
+<img style="position:relative;top:-33px;width:520px;margin-left:6px;"  src="images/field_li_desire.png" />
+<p onChange="temp_rotation17(this.form)">
+<span id="ulatitude" class="s8s2" style="position:relative;top:-55px;width:120px;text-align:center;display:inline-block"> </span>
+<span id="ulongitude" class="s8s2" style="position:relative;top:-55px;left:30px;width:120px;text-align:center;display:inline-block"> </span>
+<input type="button" style="position:relative;top:-55px;left:130px; height:40px; width:150px;" value="Get Location" onClick="getGPSParams_up()"/>
+</p>
+<img style="position:relative;top:-85px;margin-left:6px;" src="images/field_bg_desire_small.png" width="120"/>
+<img style="position:relative;top:-85px;left:40px" src="images/field_bg_desire_small.png" width="120"/>
+<div style="position:relative;top:-25px">
+<p style="color:#6599ff;font-size:15pt;margin-top:-40px;margin-left:6px;"> ASSESSMENT </p>
+<img style="position:relative;top:-33px;width:520px;margin-left:6px;" src="images/field_li_desire.png" /> 
+<br/>
+<input type="text" id="deliverystatus" class="s8s2" style="position:relative;width:200px;height:40px;top:-30px" value="Delivery status"
+onblur="if (this.value == '') {this.value = 'Delivery status',this.style.color='#B3B9B3'};validateForm_s8s2(this.form)"
+	onfocus="if (this.value == 'Delivery status') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation14(this.form)" 
+/>
+<br/>
+<img style="position:relative;top:-45px;width:200px;margin-left:6px;" src="images/field2_bg_desire.png" /><br/>
+
+<input type="text" name="comments" value="Comments" id="comments" class="s8s2" style="position:relative;top:-40px"
+	onblur="if (this.value == '') {this.value = 'Comments',this.style.color='#B3B9B3'};validateForm_s8s2(this.form)"
+	onfocus="if (this.value == 'Comments') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation15(this.form)" 
+	/><br />	
+	<img style="position:relative;top:-55px;margin-left:6px;" src="images/field_bg_Grey_desire.png" width="520"/><br />
+<input type="button" style="position:relative;top:-60px;left:370px; height:40px; width:155px;" value="Click photo" onClick="capturePhoto()" />
+
+<!-- <div id="loadup" onload="loadup()"> -->
+<p id="updestination" style="margin-top:-50px;font-size:13pt;margin-left:6px;"> dummy </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="date"> dummy </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />	
+
+<p style="color:#BFB8BB; font-size:15pt;margin-top:-5px;font-size:15pt;margin-left:6px;" >    CONSIGNEE </p>
+<img style="position:relative;top:-30px;width:520px;margin-left:6px;" src="images/field_li_Grey_desire.png" /> 
+
+<p style="margin-top:-20px;font-size:13pt;margin-left:6px;" id="upname"> dummy </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para"> <span id="upaddressline1">dummy</span> </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upaddressline2">not available </p>		
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upcity">dummy </p>	
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upphonenumber">dummy </p>	
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" /><br/>
+
+<p style="color:#BFB8BB;font-size:15pt;top:-20px;margin-top:-5px;font-size:15pt;margin-left:6px;" > CONSIGNOR </p>
+<img style="position:relative;top:-30px;width:520px;margin-left:6px;"  src="images/field_li_Grey_desire.png" />
+
+<p style="margin-top:-20px;margin-left:6px;" id="upname2">dummy </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upaddressline11"> dummy</p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upaddressline22"> not available </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upcity2"> dummy  </p>
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" />
+<p class="para" id="upphonenumber2"> dummy </p>		
+	<img class="field_bg_Grey_desire" src="images/field_bg_Grey_desire.png" /><br/>
+<p class="para"> <span style="position:relative;top:0px;width:120px;text-align:center;left:45px;margin-left:6px;" id="uplati" > lat</span>
+<span style="position:relative;top:0px;left:160px;width:120px;text-align:center" id="uplongi">long </span></p>
+<img style="position:relative;top:-25px;margin-left:6px;" src="images/field_bg_desire_small_grey.png" width="120"/>
+<img style="position:relative;top:-25px;left:20px" src="images/field_bg_desire_small_grey.png" width="120"/>
+</form>
+</div>
+<img style="display:none;position:relative;top:-20px;left:20px;width:90px;height:90px" id="smallImage" src="" />
+<div id="navigation" style="opacity:0;disabled:true">
+<ul>
+<li id="" onClick="openNativePage()"><a href="#">Create Consignment</a></li>
+<li id="" onClick="logout_tst()"><a href="#">Sign Out</a></li>
+</ul>
+</div>
+</body>
+</html>

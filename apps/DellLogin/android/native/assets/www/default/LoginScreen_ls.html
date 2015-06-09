@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/css_styling_ls.css">
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+</head>
+<body id="content">
+<div class="navbar">
+<font color="white" style="position:absolute;top:15px;left:30px" size="4" >   Sign into CONSIGN  </font>
+<img style="position:absolute;top:8px;left:510px" src="images/options_icon.png"/> 
+</div>
+<br/>
+<input type="text" name="username" value="bala" id="username" disabled="disabled"
+		style="position:absolute;
+			top:70px;
+			font-size:12pt;
+			color:#B3B9B3;
+			width: 520px;
+			margin-left:6px;
+			height: 40px;
+			border-style:none;"
+			onblur="if (this.value == '') {this.value = 'bala',this.style.color='#B3B9B3'}"
+			onfocus="if (this.value == 'bala') {this.value = '',this.style.color='#000000'}"
+			onkeyup="temp_rotation(this.form)" 
+			 /><br />
+	<img style="position:absolute;top:108px;margin-left:6px;" src="images/field_bg_desire.png" width="520"><br />		
+<input type="password" name="password" value="secret" id="password" disabled="disabled"
+		style="position:absolute;
+			top:137px;
+			background-color: transparent;
+			font-size:12pt;
+			color:#B3B9B3;
+			width: 520px;
+			margin-top:-10px;
+			margin-left:6px;
+			height: 40px;
+			border-style:none;"
+			onblur="if (this.value == '') {this.value = 'secret',this.style.color='#B3B9B3'}"
+			onfocus="if (this.value == 'secret') {this.value = '',this.style.color='#000000'}"
+			onkeyup="temp_rotationp(this.form)" 
+			 /><br />
+	<img style="position:absolute;top:165px;margin-left:6px;" src="images/field_bg_desire.png" width="520"><br />
+<input type="button" id="sign-in" value="Sign in" onclick="doLogin()"/>
+<img style="position:absolute;top:260px;left:140px;width:250px;height:250px" src="images/dell_logo_login.png" />
+</body>
+</html>

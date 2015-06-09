@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/css_styling_ls.css">
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+</head>
+<body id="content">
+<div class="navbar">
+	<img style="position:absolute;top:8px;left:15px;background-color:transparent" src="images/dell_logo.png"/> 
+	<img style="position:absolute;top:13px;left:460px;background-color:transparent" src="images/search_icon.png"/>
+	<input id="oi" type="image" src="images/options_icon.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent"
+	onClick="toggleoi()">
+	<input id="oip" type="image" src="images/options_icon_pressed.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent;opacity:0"
+	onClick="toggleoi()">
+	</div>
+<h1 class="msg" id="msg" ></h1>
+<input type="image" id="s" style="position:absolute;top:100px;left:40px;width:200px;height:140px;margin-left:6px;background-color:transparent" src="images/search.png" onclick="toggles()" >
+<input type="image" id="sp" style="position:absolute;top:100px;left:40px;width:200px;height:140px;opacity:0;margin-left:6px;background-color:transparent" src="images/search_pressed.png" onclick="toggles()" >
+<br/>
+<img style="position:absolute;top:100px;left:290px;width:200px;height:140px;margin-left:6px" id="bc" src="images/scan_barcode.png" onclick="togglebc()" />
+<img style="position:absolute;top:100px;left:290px;width:200px;height:140px;opacity:0;margin-left:6px" id="bcp" src="images/scan_barcode_pressed.png" onclick="togglebc()" />
+<!-- onclick="openNativePage()" -->
+<div id="navigation" style="opacity:0;disabled:true">
+<ul>
+<li id="" onClick="openNativePage()"><a href="#">Create Consignment</a></li>
+<li id="" onClick="logout_tst()"><a href="#">Sign Out</a></li>
+</ul>
+</div>
+</body>
+</html>

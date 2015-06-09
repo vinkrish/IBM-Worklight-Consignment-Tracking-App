@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wl:adapter xmlns:wl="http://www.worklight.com/integration" xmlns:http="http://www.worklight.com/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RSSReader">
+
+	<displayName>RSSReader</displayName>
+	<description>RSSReader</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<domain>10.0.2.2</domain>
+			<port>8080</port>
+<!-- 		<proxy>
+			For Bangalore:8080
+			<protocol>http</protocol>
+			<domain>internet.ps.net</domain>
+			<port>80</port>				
+		</proxy> -->
+						
+		</connectionPolicy>
+		<loadConstraints maxConcurrentConnectionsPerNode="50"/>
+	</connectivity>
+
+	<procedure name="getFeeds"/>
+	<procedure name="getFeedsFiltered"/>
+	<procedure name="writeConsignmentDetails"/>
+	<procedure name="updateConsignmentDetails" requestTimeoutInSeconds="90"/>
+	<procedure name="getConsignmentName"/>
+	<procedure name="getConsignmentCompleteDetails"/>
+	<procedure name="doAuthenticateDHL"/>
+	<procedure name="doAuthenticateRSS"/>
+		
+</wl:adapter>

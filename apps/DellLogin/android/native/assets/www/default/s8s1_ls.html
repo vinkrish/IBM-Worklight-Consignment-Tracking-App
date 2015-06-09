@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="css/css_styling_ls.css">
+</head>
+<body onLoad="preLoad_s8s1()" id="content">
+
+<div class="navbar">
+<img id="img" style="position:absolute;top:8px;left:15px;background-color:transparent" src="images/dell_logo.png"/> 
+	<input id="imgovr" type="image" style="position:absolute;top:12px;left:20px;background-color:transparent;opacity:0;disable:true" src="images/create.png" 
+		onClick="create_consignment()" > 
+	<font id="txt" color="white" style="position:absolute;top:17px;left:60px" size="3" >   Create CONSIGNMENT  </font>
+	<img style="position:absolute;top:13px;left:460px;background-color:transparent" src="images/search_icon.png"/>
+	<input id="oi" type="image" src="images/options_icon.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent"
+	onClick="toggleoi()">
+	<input id="oip" type="image" src="images/options_icon_pressed.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent;opacity:0"
+	onClick="toggleoi()">
+</div>
+<br/>
+<form>
+<input type="text" name="destination" value="Destination" id="destination" class="s5s3" style="position:relative;top:-10px"
+	onblur="if (this.value == '') {this.value = 'Destination',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Destination') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation1(this.form)"
+	/><br />	
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-25px;margin-left:6px;" /><br/>
+		
+<input type="date" name="date" value="Day-Month-Year" id="Date" class="s5s3d" style="position:relative;top:-20px"
+	onblur="if (this.value == '') {this.value = 'Date',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Day-Month-Year') {this.value = '',this.style.color='#000000'};temp_rotation2(this.form)"
+	onclick="openNativePage2()"
+	/><br />
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-35px;margin-left:6px;" /><br/>	
+	
+<p  style="color:#6599ff;font-size:15pt;margin-top:-15px;margin-left:6px;"> CONSIGNEE </p>
+<img style="position:relative;top:-33px;width:520px;margin-left:6px;" src="images/field_li_desire.png" />
+<br/>
+<input type="text" name="name" value="Name" id="name" class="s5s3" style="position:relative;top:-30px;top:-30px"
+	onblur="if (this.value == '') {this.value = 'Name',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Name') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation3(this.form)" 
+	/><br />
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-45px;margin-left:6px;" /><br/>
+<input type="text" name="addressline1" value="Address Line 1" id="addressline1" class="s5s3" style="position:relative;top:-40px"
+	onblur="if (this.value == '') {this.value = 'Address Line 1',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Address Line 1') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation4(this.form)" 
+	/><br />
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-55px;margin-left:6px;" /><br/>	
+<input type="text" name="addressline2" value="Address Line 2" id="addressline2" class="s5s3" style="position:relative;top:-50px"
+	onblur="if (this.value == '') {this.value = 'Address Line 2',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Address Line 2') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation5(this.form)" 
+	/><br />			
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-65px;margin-left:6px;"/><br/>
+<input type="text" name="city" value="City" id="city" class="s5s3" style="position:relative;top:-60px"
+	onblur="if (this.value == '') {this.value = 'City',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'City') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation6(this.form)" 
+	/><br />		
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-75px;margin-left:6px;" /><br/>
+	
+<input type="text" name="phonenumber"  value="Phone Number" id="phonenumber" class="s5s3" style="width:250px;top:-70px"
+	onblur="if (this.value == '') {this.value = 'Phone Number',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Phone Number') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation7(this.form)" 
+	/>
+<input type="text" value="Mobile" class="s5s3" style="position:relative;width:150px;left:110px;text-align:center;top:-70px"
+	onblur="if (this.value == '') {this.value = 'Mobile';}"
+	onfocus="if (this.value == 'Mobile') {this.value = '';}" 
+	/>
+	<br />			
+	<img style="position:relative;top:-85px;margin-left:6px;" src="images/field_bg_desire.png" width="250px" />
+	<img style="position:relative;top:-85px;left:115px" src="images/field2_bg_desire.png" width="150px" />
+	<p style="color:#B3B9B3;margin-top:-70px;margin-left:6px;"> add new</p>
+<p style="position:relative;color:#6599ff;font-size:15pt;margin-top:0px;margin-left:6px;"> CONSIGNOR</p>
+<img style="position:relative;top:-33px;width:520px;margin-left:6px;" src="images/field_li_desire.png" />
+<br/>
+<input type="text" name="name2" value="Name" id="name2" class="s5s3" style="position:relative;top:-30px"
+	onblur="if (this.value == '') {this.value = 'Name',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Name') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation8(this.form)" 
+	 /><br />
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-45px;margin-left:6px;" /><br/>
+<input type="text" name="addressline12" value="Address Line 1" id="addressline12" class="s5s3" style="position:relative;top:-40px"
+	onblur="if (this.value == '') {this.value = 'Address Line 1',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Address Line 1') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation9(this.form)" 
+	/><br />
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-55px;margin-left:6px;" /><br/>
+<input type="text" name="addressline22" value="Address Line 2" id="addressline22" class="s5s3" style="position:relative;top:-50px"
+	onblur="if (this.value == '') {this.value = 'Address Line 2',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Address Line 2') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation10(this.form)" 
+	/><br />	
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-65px;margin-left:6px;" /><br/>
+<input type="text" name="city2" value="City" id="city2" class="s5s3" style="position:relative;top:-60px"
+	onblur="if (this.value == '') {this.value = 'City',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'City') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation11(this.form)" 
+	/><br />		
+	<img src="images/field_bg_desire.png" style="position:relative;width:520px;top:-75px;margin-left:6px;" /><br/>
+	
+<input type="text" name="phonenumber2" value="Phone Number" id="phonenumber2" class="s5s3" style="width:250px;top:-70px"
+	onblur="if (this.value == '') {this.value = 'Phone Number',this.style.color='#B3B9B3'};validateForm_s8s1(this.form)"
+	onfocus="if (this.value == 'Phone Number') {this.value = '',this.style.color='#000000'}"
+	onkeyup="temp_rotation12(this.form)" 
+	/>
+<input type="text" value="Mobile" class="s5s3" style="position:relative;width:150px;left:110px;text-align:center;top:-70px"
+	onblur="if (this.value == '') {this.value = 'Mobile';}"
+	onfocus="if (this.value == 'Mobile') {this.value = '';}" 
+	/>
+	<br />			
+	<img style="position:relative;top:-85px;margin-left:6px;" src="images/field_bg_desire.png" width="250" />
+	<img style="position:relative;top:-85px;left:115px" src="images/field2_bg_desire.png" width="150px" />
+	<br/>
+	<p style="color:#B3B9B3;margin-top:-70px;margin-left:6px;"> add new</p>
+	<p onChange="temp_rotation16(this.form)">
+<span id="latitude" style="position:relative;top:-3px;width:120px;display:inline-block;text-align:center;margin-left:6px;"> latitude </span>
+<span id="longitude" style="position:relative;top:-3px;left:30px;width:120px;display:inline-block;text-align:center">longitude</span>
+<input type="button" id="get-location" value="get-location" onClick="getGPSParams()"/>
+</p>
+<img style="position:relative;top:-35px;margin-left:6px;" src="images/field_bg_desire_small.png" width="120"/>
+<img style="position:relative;top:-35px;left:30px" src="images/field_bg_desire_small.png" width="120"/>
+<br/>
+</form>
+<div id="navigation" style="opacity:0;disabled:true">
+<ul>
+<li id="" onClick="openNativePage()"><a href="#">Create Consignment</a></li>
+<li id="" onClick="logout_tst()"><a href="#">Sign Out</a></li>
+</ul>
+</div>
+</body>
+</html>

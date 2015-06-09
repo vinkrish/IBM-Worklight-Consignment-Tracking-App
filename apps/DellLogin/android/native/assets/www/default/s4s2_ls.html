@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="css/css_styling_ls.css">
+</head>
+<body onLoad="update_barcode_tst()" id="content">
+<div class="back">
+<div class="navtransparent">
+<img style="position:absolute;top:8px;left:15px;background-color:transparent" src="images/dell_logo.png"/> 
+	<font color="white" style="position:absolute;top:17px;left:70px" size="4" > Scan bar code </font>
+	<img style="position:absolute;top:15px;left:460px;background-color:transparent" src="images/search_icon.png"/>
+	<input type="image" src="images/options_icon.png" style="position:absolute;top:8px;left:510px;border:0;background-color:transparent">
+</div>
+<br/>
+<div class="imag">
+<img style="position:relative;top:0px;left:0px" src="images/barcode.png"/>
+</div>
+<br/>
+<p style="color:white;position:absolute;top:70px;left:260px"> AWB number is: </p>
+<br/>
+<form name="frm" id="frm">
+<!-- <input type="text" id="text1" name="text1" style="position:absolute;top:330px;left:70px;width:175px;font-size:13pt;text-align:center;background-color:#ffffff" /> 
+ -->
+ <p id="text1" style="position:absolute;top:100px;left:260px;font-size:13pt;color:#ffffff"> </p>
+<input type="button" id="cret" style="position:absolute;top:220px;left:260px;width:80px;height:30px;font-size:13pt;background-color:#ffffff" value="Create" onclick="common_s8s1()"/>
+<input type="button" id="upd" style="position:absolute;top:220px;left:360px;width:80px;height:30px;font-size:13pt;background-color:#ffffff" value="Update" onclick="s8s2Intermediate_tst()"/>
+</form>
+</div>
+</body>
+</html>
